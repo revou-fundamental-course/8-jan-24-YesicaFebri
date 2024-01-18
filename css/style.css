@@ -1,0 +1,136 @@
+body {
+    background-color: #302D54 ;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif ;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+#col {
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+}
+
+
+
+/* ---------------------------- NAVTAB PERSEGI & PERSEGI PANJANG */
+.tab{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navtab {
+    border: 2px solid #fff;
+    border-radius: 200px;
+    display: inline-block;
+}
+
+.nav-pills .nav-link {
+    border-radius: 200px;
+    color: #fff;
+    padding:5px 50px;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #fff;
+    color: #302D54;
+    border-radius: 200px;
+}
+
+
+/* ---------------------------- ALL CONTENT */
+.card {
+    width: 80%;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.tab-pane {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* ---------------------------- PERSEGI */
+.persegi {
+    width: 150px; 
+    height: 150px; 
+    border: 3px solid red;
+    padding: 5px; 
+    justify-content: center; 
+}
+
+.nav-tabs {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    text-align: center;
+    color: black;
+}
+
+.nav-link:hover {
+    text-align: center;
+    color: black;
+}
+
+.card-body p{
+    margin: 0;
+}
+
+#kelPersegi{
+    background-color: #4d4788;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#LuasPersegi{
+    background-color: #4d4788;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#reset{
+    margin-top: 15px;
+}
+
+/* ---------------------------- PERSEGI PANJANG */
+.panjang{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.pPanjang {
+    width: 250px; 
+    height: 150px; 
+    border: 3px solid red; 
+    padding: 5px; 
+    text-align: center; 
+}
+
+#kelPersegiP{
+    background-color: #4d4788;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#luasPersegiP{
+    background-color: #4d4788;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.form{
+    text-align: left;
+    padding: 0 30px;
+}

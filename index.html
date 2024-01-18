@@ -1,1 +1,233 @@
-<!-- /// -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pastikan Anda memuat Bootstrap CSS dan JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyA8b1z7uZKCA1DbjAybs0P/HFq5/KLQ6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-MhX6bQK8aWNt/biKhI2GRtL4N5I9VezbNMPRaH2o7IiAdoFdATXtxdd9aPc2M5f" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyA8b1z7uZKCA1DbjAybs0P/HFq5/KLQ6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <Link rel="stylesheet" href="css/style.css">
+    <title>Mini Coding Project</title>
+</head>
+
+<body>
+    <header>
+        <h1><strong>Selamat datang di Dunia Kalkulasi</strong></h1>
+        <h3><strong>Hitung Persegi dan Persegi Panjang dengan Presisi di Sini!</strong></h3>
+    </header>
+
+    <!-- NAVTAB PERSEGI & PERSEGI PANJANG -->
+    <div class="tab">
+        <div class="navtab">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-persegi-tab" data-bs-toggle="pill" data-bs-target="#pills-persegi" type="button" role="tab" aria-controls="pills-persegi" aria-selected="true">Persegi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-persegiPanjang-tab" data-bs-toggle="pill" data-bs-target="#pills-persegiPanjang" type="button" role="tab" aria-controls="pills-persegiPanjang" aria-selected="false">Persegi Panjang</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- START ALL CONTENT -->
+    <div class="card">
+        <div class="card-body">
+            <div class="tab-content" id="pills-tabContent">
+                <!-- PERSEGI -->
+                <div class="tab-pane fade show active" id="pills-persegi" role="tabpanel1" aria-labelledby="pills-persegi-tab" tabindex="0">
+                    <div class="row g-3" align="center">
+                        <div class="col-12" >
+                            <div class="persegi"></div>
+                            <p>sisi</p>
+                        </div>
+                    </div>
+                    <div class="row g-3" >
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+                                <button class="nav-link active" id="nav-keliling-tab" data-bs-toggle="tab" data-bs-target="#nav-keliling" type="button" role="tab" aria-controls="nav-keliling" aria-selected="true">Keliling</button>
+                                <button class="nav-link" id="nav-luas-tab" data-bs-toggle="tab" data-bs-target="#nav-luas" type="button" role="tab" aria-controls="nav-luas" aria-selected="false">Luas</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-keliling" role="tabpanel" aria-labelledby="nav-keliling-tab" tabindex="0">
+                                <div class="row g-3" style="margin-top: 10px;">
+                                    <div class="col" id="col">
+                                        <div class="card border-dark mb-3" style="width: 100%;">
+                                            <div class="card-header">Rumus Keliling Persegi</div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <h5 class="card-title" align="center">K = 4 x s</h5>
+                                                <p class="card-text">Keterangan :</p>
+                                                <p class="card-text">K = Keliling</p>
+                                                <p class="card-text">s = Sisi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="col">
+                                        <div class="left" align="left"> 
+                                            <label for="inputSisi" class="form-label">Panjang Sisi</label>
+                                            <input type="number" id="sisi-kel" name="sisi-kel" class="form-control" placeholder="Masukkan angka">
+                                            <button  class="btn" id="kelPersegi"  >Hitung</button>
+                                            <button onclick="reset()" class="btn btn-warning" id="reset">Reset</button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="col-12">
+                                        <div class="card border-success mb-3" style="width: 45%;">
+                                            <div class="card-header">Hasil</div>
+                                            <div class="card-body text-success">
+                                                <div id="outputKelPersegi" class="form"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-luas" role="tabpanel" aria-labelledby="nav-luas-tab" tabindex="0">
+                                <div class="row g-3" style="margin-top: 10px;">
+                                    <div class="col" id="col">
+                                        <div class="card border-dark mb-3" style="width: 100%;">
+                                            <div class="card-header">Rumus Luas Persegi</div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <h5 class="card-title" align="center">L = s x s</h5>
+                                                <p class="card-text">Keterangan :</p>
+                                                <p class="card-text">L = Luas</p>
+                                                <p class="card-text">s = Sisi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="col">
+                                        <div class="left" align="left">
+                                            <label for="inputSisi" class="form-label">Panjang Sisi</label>
+                                            <input type="number" id="sisi-luas" name="sisi-luas" class="form-control" placeholder="Masukkan panjang sisi">
+                                            <button class="btn" id="LuasPersegi"  >Hitung</button>
+                                            <button onclick="reset()" class="btn btn-warning" id="reset" >Reset</button>
+                                        </div>                                        
+                                    </div>
+                                    <hr>
+                                    <div class="col-12">
+                                        <div class="card border-success mb-3" style="width: 45%;">
+                                            <div class="card-header">Hasil</div>
+                                            <div class="card-body text-success">
+                                                <div id="outputLuasPersegi"  class="form"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PERSEGI -->
+                <!-- PERSEGI PANJANG -->
+                <div class="tab-pane fade" id="pills-persegiPanjang" role="tabpanel1" aria-labelledby="pills-persegiPanjang-tab" tabindex="0">
+                    <div class="row g-3" >
+                        <div class="col-12" align="center">
+                            <div class="panjang">
+                                <p style="margin-right: 10px;">lebar</p>
+                                <div class="pPanjang"></div>
+                            </div>
+                            <p style="margin-left: 45px;"> panjang</p>
+                        </div>
+                    </div>
+                    <div class="row g-3" >
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+                                <button class="nav-link active" id="nav-kelilingP-tab" data-bs-toggle="tab" data-bs-target="#nav-kelilingP" type="button" role="tab" aria-controls="nav-kelilingP" aria-selected="true">Keliling</button>
+                                <button class="nav-link" id="nav-luasP-tab" data-bs-toggle="tab" data-bs-target="#nav-luasP" type="button" role="tab" aria-controls="nav-luasP" aria-selected="false">Luas</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-kelilingP" role="tabpanel" aria-labelledby="nav-kelilingP-tab" tabindex="0">
+                                <div class="row g-3" style="margin-top: 10px;">
+                                    <div class="col" id="col">
+                                        <div class="card border-dark mb-3" style="width: 100%;">
+                                            <div class="card-header">Rumus Keliling Persegi Panjang</div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <h5 class="card-title" align="center">K = 2 ( p + l )</h5>
+                                                <p class="card-text">Keterangan :</p>
+                                                <p class="card-text">K = Keliling</p>
+                                                <p class="card-text">p= Panjang</p>
+                                                <p class="card-text">l = Lebar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="col">
+                                        <div class="left" align="left">
+                                            <label for="inputPanjang" class="form-label">Panjang</label>
+                                            <input type="number" id="panjang-kel" name="panjang-kel" class="form-control" placeholder="Masukkan panjang">
+                                            <label for="inputLebar" class="form-label" style="margin-top: 15px;">Lebar</label>
+                                            <input type="number" id="lebar-kel" name="lebar-kel" class="form-control" placeholder="Masukkan Lebar">
+                                            <button class="btn" id="kelPersegiP"  >Hitung</button>
+                                            <button onclick="reset()" class="btn btn-warning" id="reset" >Reset</button>
+                                        </div>                                        
+                                        
+                                    </div>
+                                    <hr>
+                                    <div class="col-12">
+                                        <div class="card border-success mb-3" style="width: 45%;">
+                                            <div class="card-header">Hasil</div>
+                                            <div class="card-body text-success">
+                                                <div id="outputKelP"  class="form"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-luasP" role="tabpanel" aria-labelledby="nav-luasP-tab" tabindex="0">
+                                <div class="row g-3" style="margin-top: 10px;">
+                                    <div class="col" id="col">
+                                        <div class="card border-dark mb-3" style="width: 100%;">
+                                            <div class="card-header">Rumus Luas Persegi Panjang</div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <h5 class="card-title" align="center">L = p x l</h5>
+                                                <p class="card-text">Keterangan :</p>
+                                                <p class="card-text">L = Luas</p>
+                                                <p class="card-text">p = Panjang</p>
+                                                <p class="card-text">l = Lebar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="col">
+                                        <div class="left" align="left">
+                                            <label for="inputPanjang" class="form-label">Panjang</label>
+                                            <input type="number" id="panjang-luas" name="panjang-luas" class="form-control" placeholder="Masukkan panjang">
+                                            <label for="inputLebar" class="form-label" style="margin-top: 15px;">Lebar</label>
+                                            <input type="number" id="lebar-luas" name="lebar-luas" class="form-control" placeholder="Masukkan Lebar">
+                                            <button class="btn" id="luasPersegiP"  >Hitung</button>
+                                            <button onclick="reset()" class="btn btn-warning" id="reset" >Reset</button>
+                                        </div>
+                                        
+                                    </div>
+                                    <hr>
+                                    <div class="col-12">
+                                        <div class="card border-success mb-3" style="width: 45%;">
+                                            <div class="card-header">Hasil</div>
+                                            <div class="card-body text-success">
+                                                <div id="outputLuasP"  class="form"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PERSEGI PANJANG -->
+            </div>
+        </div>
+    </div>
+    <!-- END ALL CONTENT -->
+
+        
+
+   
+
+</body>
+<script src="./js/script.js"></script>
+</html>
