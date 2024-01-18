@@ -53,11 +53,11 @@ luasPersegiP.addEventListener("click", function () {
   let p = parseFloat(panjangLuas.value);
   let l = parseFloat(lebarLuas.value);
   let L = p * l;
-  outputLuasP.innerHTML += `Keliling persegi panjang apabila diketahui ukuran panjang ${p} dan lebar ${l} adalah...<br>`;
+  outputLuasP.innerHTML += `Luas persegi panjang apabila diketahui ukuran panjang ${p} dan lebar ${l} adalah...<br>`;
   outputLuasP.innerHTML += `L = p x l<br>`;
   outputLuasP.innerHTML += `L = ${p} x ${l}<br>`;
   outputLuasP.innerHTML += `L = ${L}<br>`;
-  outputLuasP.innerHTML += `Jadi, keliling persegi panjang adalah ${L}`;
+  outputLuasP.innerHTML += `Jadi, luas persegi panjang adalah ${L}`;
 });
 
 function reset() {
